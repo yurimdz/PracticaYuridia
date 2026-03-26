@@ -10,9 +10,10 @@ body {
     width: 400px;
     height: 700px;
     background: #e5b85c;
-    padding: 20px;
+    padding: 25px;
     position: relative;
     text-align: center;
+    overflow: hidden;
 }
 
 /* ===== TITULO ===== */
@@ -21,22 +22,45 @@ body {
     position: relative;
 }
 
+/* SIGNOS */
 .signo {
-    font-size: 40px;
+    font-size: 45px;
     color: #7a3eb1;
     font-weight: bold;
-    margin: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* POSICIÓN */
+.signo-left {
+    transform: rotate(-15deg);
+}
+
+.signo-right {
+    transform: rotate(15deg);
+}
+
+/* 🔥 ANIMACIÓN SIGNOS */
+.signo:hover {
+    transform: scale(1.4) rotate(0deg);
+    color: #ff4081;
 }
 
 /* CAJAS */
 .box {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 12px 18px;
     font-family: 'Fredoka', sans-serif;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 5px;
     cursor: pointer;
-    position: relative;
+
+    transition: all 0.35s ease;
+
+    /* sombra tipo sticker */
+    box-shadow: 3px 5px 0px rgba(0,0,0,0.25);
 }
 
 /* COLORES */
@@ -55,52 +79,57 @@ body {
     color: white;
 }
 
-/* POSICIÓN DESORDENADA (como imagen) */
+/* POSICIONES DESORDENADAS */
 .sede {
-    transform: rotate(-3deg);
+    transform: rotate(-4deg);
 }
 
 .te {
-    transform: rotate(5deg);
-    top: 10px;
+    transform: rotate(6deg);
+    position: relative;
+    top: 12px;
 }
 
 .acompana {
     transform: rotate(-2deg);
+    position: relative;
     top: 5px;
 }
 
-/* 🔥 ANIMACIÓN */
+/* 🔥 ANIMACIÓN PRO */
 .box:hover {
-    transform: scale(1.2) rotate(0deg);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transform: scale(1.25) rotate(0deg);
+    box-shadow: 6px 10px 20px rgba(0,0,0,0.35);
 }
 
 /* ===== TEXTO ===== */
 .mensaje {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .mensaje p {
     font-size: 18px;
+    font-weight: 500;
 }
 
 .mensaje h2 {
     color: #7a3eb1;
+    font-weight: 700;
 }
 
 /* ===== QR ===== */
 .qr {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .qr p {
-    color: white; /* 👈 lo que pediste */
+    color: white;
     font-size: 14px;
 }
 
 .qr img {
     margin-top: 10px;
+    border-radius: 5px;
 }
 
 /* ===== PERSONAS ===== */
@@ -108,9 +137,16 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .personas img {
     width: 45%;
-    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* efecto sutil en personas */
+.personas img:hover {
+    transform: scale(1.05);
 }
