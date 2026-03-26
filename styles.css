@@ -2,11 +2,13 @@ body {
     margin: 0;
     background: #eee;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
     padding: 30px;
     font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
 }
 
 /* ================= AFICHE ================= */
@@ -15,7 +17,7 @@ body {
     height: 700px;
     background: #e5b85c;
     padding: 25px;
-    padding-bottom: 180px; /* evita que las imágenes tapen el QR */
+    padding-bottom: 180px;
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -23,7 +25,6 @@ body {
     animation: aparecer 1s ease;
 }
 
-/* Animación entrada */
 @keyframes aparecer {
     from {
         opacity: 0;
@@ -35,12 +36,10 @@ body {
     }
 }
 
-/* TITULO */
 .titulo {
     margin-top: 20px;
 }
 
-/* SIGNOS */
 .signo {
     font-size: 45px;
     color: #7a3eb1;
@@ -52,7 +51,6 @@ body {
 .signo-left { transform: rotate(-15deg); }
 .signo-right { transform: rotate(15deg); }
 
-/* Animación rebote */
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
@@ -63,7 +61,6 @@ body {
     color: #ff4081;
 }
 
-/* CAJAS */
 .box {
     display: inline-block;
     padding: 12px 18px;
@@ -75,22 +72,18 @@ body {
     transition: 0.3s;
 }
 
-/* COLORES */
 .azul { background: #3ec1d3; color: white; }
 .blanco { background: white; color: black; }
 .morado { background: #7a3eb1; color: white; }
 
-/* POSICIÓN DESORDENADA */
 .sede { transform: rotate(-4deg); }
 .te { transform: rotate(6deg); position: relative; top: 12px; }
 .acompana { transform: rotate(-2deg); position: relative; top: 5px; }
 
-/* HOVER */
 .box:hover {
     transform: scale(1.25);
 }
 
-/* TEXTO */
 .mensaje {
     margin-top: 60px;
 }
@@ -99,7 +92,7 @@ body {
     color: #7a3eb1;
 }
 
-/* QR */
+
 .qr {
     margin-top: 50px;
 }
@@ -112,8 +105,7 @@ body {
     margin-top: 10px;
 }
 
-/* PERSONAS */
-.personas {
+.gatos {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -121,12 +113,12 @@ body {
     justify-content: space-around;
 }
 
-.personas img {
+.gatos img {
     width: 45%;
     transition: 0.3s;
 }
 
-.personas img:hover {
+.gatos img:hover {
     transform: scale(1.05);
 }
 
@@ -142,7 +134,6 @@ body {
     animation: slideIn 1s ease;
 }
 
-/* Animación entrada lateral */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -154,7 +145,6 @@ body {
     }
 }
 
-/* FILAS */
 .fila {
     display: flex;
     justify-content: space-between;
@@ -168,7 +158,6 @@ body {
     transform: translateX(5px);
 }
 
-/* FLECHA */
 .fila span {
     transition: 0.3s;
 }
@@ -177,14 +166,12 @@ body {
     transform: translateX(10px);
 }
 
-/* LINEAS */
 .linea {
     height: 1px;
     background: rgba(255,255,255,0.3);
     margin: 0 10px;
 }
 
-/* FOOTER */
 .footer {
     background: #f2f2f2;
     color: #0d2a5c;
