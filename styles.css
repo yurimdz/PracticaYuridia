@@ -15,7 +15,7 @@ body {
     height: 700px;
     background: #e5b85c;
     padding: 25px;
-    padding-bottom: 180px;
+    padding-bottom: 180px; /* evita que las imágenes tapen el QR */
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -23,7 +23,7 @@ body {
     animation: aparecer 1s ease;
 }
 
-/* ENTRADA */
+/* Animación entrada */
 @keyframes aparecer {
     from {
         opacity: 0;
@@ -52,14 +52,15 @@ body {
 .signo-left { transform: rotate(-15deg); }
 .signo-right { transform: rotate(15deg); }
 
+/* Animación rebote */
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
 }
 
 .signo:hover {
-    color: #ff4081;
     transform: scale(1.4);
+    color: #ff4081;
 }
 
 /* CAJAS */
@@ -79,14 +80,14 @@ body {
 .blanco { background: white; color: black; }
 .morado { background: #7a3eb1; color: white; }
 
-/* POSICIONES */
+/* POSICIÓN DESORDENADA */
 .sede { transform: rotate(-4deg); }
 .te { transform: rotate(6deg); position: relative; top: 12px; }
 .acompana { transform: rotate(-2deg); position: relative; top: 5px; }
 
-/* ANIMACIÓN TEXTO */
+/* HOVER */
 .box:hover {
-    transform: scale(1.25) rotate(0deg);
+    transform: scale(1.25);
 }
 
 /* TEXTO */
@@ -105,6 +106,10 @@ body {
 
 .qr p {
     color: white;
+}
+
+.qr img {
+    margin-top: 10px;
 }
 
 /* PERSONAS */
@@ -137,7 +142,7 @@ body {
     animation: slideIn 1s ease;
 }
 
-/* ENTRADA */
+/* Animación entrada lateral */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -156,10 +161,8 @@ body {
     padding: 18px;
     transition: 0.3s;
     cursor: pointer;
-    position: relative;
 }
 
-/* EFECTO HOVER */
 .fila:hover {
     background: rgba(255,255,255,0.1);
     transform: translateX(5px);
