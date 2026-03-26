@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.poster {
+    width: 400px;
+    height: 700px;
+    background: #e5b85c;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+/* ===== TITULO ===== */
+.titulo {
+    margin-top: 20px;
+    position: relative;
+}
+
+.signo {
+    font-size: 40px;
+    color: #7a3eb1;
+    font-weight: bold;
+    margin: 5px;
+}
+
+/* CAJAS */
+.box {
+    display: inline-block;
+    padding: 10px 15px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+/* COLORES */
+.azul {
+    background: #3ec1d3;
+    color: white;
+}
+
+.blanco {
+    background: white;
+    color: black;
+}
+
+.morado {
+    background: #7a3eb1;
+    color: white;
+}
+
+/* POSICIÓN DESORDENADA (como imagen) */
+.sede {
+    transform: rotate(-3deg);
+}
+
+.te {
+    transform: rotate(5deg);
+    top: 10px;
+}
+
+.acompana {
+    transform: rotate(-2deg);
+    top: 5px;
+}
+
+/* 🔥 ANIMACIÓN */
+.box:hover {
+    transform: scale(1.2) rotate(0deg);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== TEXTO ===== */
+.mensaje {
+    margin-top: 50px;
+}
+
+.mensaje p {
+    font-size: 18px;
+}
+
+.mensaje h2 {
+    color: #7a3eb1;
+}
+
+/* ===== QR ===== */
+.qr {
+    margin-top: 40px;
+}
+
+.qr p {
+    color: white; /* 👈 lo que pediste */
+    font-size: 14px;
+}
+
+.qr img {
+    margin-top: 10px;
+}
+
+/* ===== PERSONAS ===== */
+.personas {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.personas img {
+    width: 45%;
+    margin: 5px;
+}
